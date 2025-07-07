@@ -21,7 +21,7 @@ export async function fetchRevenue() {
     const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
     const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
 
-    const data = await sql<revenue[]> `SELECT * FROM revenue`;
+    const data = await sql<Revenue[]> `SELECT * FROM revenue`;
 
     console.log('Data fetch completed after 3 seconds.');
 
